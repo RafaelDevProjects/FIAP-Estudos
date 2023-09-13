@@ -86,7 +86,7 @@ segunda: Testar e ver qual é o maior numero e usar uma variavel auxiliar, para 
 terceira: Depois de achar o maior e coloca-lo na variavel n1, testar o n2 e n3 para saber qual é maior entre eles.
 '''
 
-'''
+
 if n1 > n2 and n1 > n3:
     pass
 elif n2 > n3:
@@ -101,7 +101,7 @@ if n2>n3:
     print(n3,n2,n1)
 else:
     print(n2,n3,n1)
-'''
+
 
 
 #Altura e sexo de uma pessoa, calculo de peso ideal.
