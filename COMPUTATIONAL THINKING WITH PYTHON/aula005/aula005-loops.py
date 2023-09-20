@@ -2,7 +2,7 @@
 
 
 # senha com while.
-'''senha = '1234'
+senha = '1234'
 senha_usuario = input('Diga sua senha: ')
 repetições = 0
 
@@ -14,7 +14,7 @@ if senha_usuario == senha:
     print('Acesso permitido')
 else:
     print('Acesso Bloquado')
-'''
+
 
 
 inicio = int(input('Digite um numero para começar: '))
