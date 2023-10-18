@@ -1,78 +1,54 @@
-print(f"{'-='*5}Boas Vindas{'-='*5}")
-nome = input('Qual é o seu nome?')
-endereço = input(f'{nome} qual é o seu endereço?')
-anoNascimento = input(f'{nome} qual é o seu ano de nascimento? ')
-anoAtual = 2023
-total = 0
-frete = 10
-qntVinhoTinto = 0
-qntVinhoRose = 0
-qntVinhoBranco = 0
-
-
-
-while not anoNascimento.isnumeric():
-    print(f'{nome} Digite um numero!!')
-    anoNascimento = input(f'{nome} qual é o seu ano de nascimento? ')
-anoNascimento = int(anoNascimento)
-idade = anoAtual - anoNascimento
-
-if idade >= 18:
-    while True:
-        print(f"{'-='*5}Opções de vinho{'-='*5}\n ROSE R$ 50 \n BRANCO R$ 100 \n TINTO R$ 200")
-        print(f"{'-='*10}")
-
-
-        vinho = input(f'{nome} Escolha uma das opções: ')
-        while not (vinho == 'ROSE' or vinho == 'BRANCO' or vinho == 'TINTO'):
-            print('Escolha uma opção!')
-            vinho = input(f'{nome} Escolha uma das opções: ')
-
-        quantidadeGarrafas = input(f'{nome} Qual é a quantidade de garradas? ')
-        while not quantidadeGarrafas.isnumeric():
-            print('Escolha um valor valido')
-            quantidadeGarrafas = input(f'{nome} Qual é a quantidade de garradas? ')
-        quantidadeGarrafas = int(quantidadeGarrafas)
-
-
-        if vinho == 'BRANCO':
-            preco = 50
-            total = quantidadeGarrafas * 50
-            qntVinhoBranco = quantidadeGarrafas
-        elif vinho == 'ROSE':
-            total = quantidadeGarrafas * 100
-            qntVinhoRose = quantidadeGarrafas
-        else:
-            total = quantidadeGarrafas * 200
-            qntVinhoTinto = quantidadeGarrafas
-
-
-        continuar = input('Deseja continuar a compra? [S/N]')
-        while not (continuar == 'S' or continuar == 'N'):
-            continuar = input('[ Digite um valor VALIDO ] Deseja continuar a compra? [S/N]')
-
-        if continuar == 'S':
-            pass
-        else:
-            break
-
-    print(f"{'-='*5}Obrigado pela preferencia{'-='*5}")
-    if total > 500:
-        print('O total foi maior que R$ 500 você tem Frete GRATIS!!')
-    else:
-        print(f'A taxa de frete é 10 R$')
-        total = total + frete
-
-    print(f'O Endereço de entrega É {endereço}')
-    print(f'Total = {total}')
-    print(f'Vinho TINTO: {qntVinhoTinto} Unidades')
-    print(f'Vinho ROSE: {qntVinhoRose} Unidades')
-    print(f'Vinho BRANCO {qntVinhoBranco}')
-
-
-
-
-
+print("Seja bem vindo à Vinheria!")
+ano = input("Diga seu ano de nascimento : ")
+endereco = input("Diga seu endereco : ")
+while not ano.isnumeric():
+    print("Deve ser um número com 4 caracteres!")
+    ano = input("Diga seu ano de nascimento : ")
+ano = int(ano)
+if 2023 - ano < 18:
+    print("Isso é muito feio!!!")
 else:
-    print('Não é permitida a venda de bebidas alcoolicas para menores de idade!!!')
+    vinho1 = 'tinto'
+    vinho2 = 'suave'
+    vinho3 = 'seco'
+    preco1 = 30
+    preco2 = 40
+    preco3 = 50
+    qtd1 = 0
+    qtd2 = 0
+    qtd3 = 0
+    valor_total = 0
+    while True:
+        print(f"Temos as seguintes opcoes: {vinho1} por R${preco1},00,\n"
+              f"{vinho2} por R${preco2},00,\n"
+              f"{vinho3} por R${preco3},00,")
+        opcao = input("Qual voce vai levar ? (sair para encerrar) ")
+        while opcao != vinho1 and opcao != vinho2 and opcao != vinho3 and opcao != 'sair':
+            print("Deve ser uma opcao cadastrada!")
+            opcao = input("Qual voce vai levar ? (sair para encerrar) ")
+        if opcao == 'sair':
+            if valor_total>500:
+                print("Frete Grátis!!!")
+            else:
+                frete = 50
+                print(f"Frete de R${frete},00")
+                valor_total += frete
 
+            print(f"Obrigado por comprar aqui. Voce comprou {qtd1} do {vinho1}, "
+                  f"{qtd2} do {vinho2} e {qtd3} do {vinho3} totalizando"
+                  f" R${valor_total},00 a ser entregue em {endereco}.")
+            break
+        qtd = input(f"Quantas garrafas do vinho {opcao} você vai levar ? ")
+        while not qtd.isnumeric():
+            print("Tem que ser um número!")
+            qtd = input(f"Quantas garrafas do vinho {opcao} você vai levar ? ")
+        qtd = int(qtd)
+        if opcao == vinho1:
+            valor_total += qtd*preco1
+            qtd1 += qtd
+        elif opcao == vinho2:
+            valor_total += qtd*preco2
+            qtd2 += qtd
+        elif opcao == vinho3:
+            valor_total += qtd*preco3
+            qtd3 += qtd
