@@ -1,0 +1,34 @@
+.container {
+    background-color: bisque;
+    display: grid;
+    grid-template-columns: 500px 200px 200px; /*Ajusta o tamanho horizontal*/
+    grid-template-rows: 100px 100px 100px; /*Ajusta o tamanho vertical*/
+}
+
+.container_linha{
+    background-color: bisque;
+    display: grid;
+    grid-template-rows: 200px 200px 200px ;
+}
+
+.container_fracao{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr; /*Ajusta por fração da tela*/
+
+}
+
+.container_fracao_repeat{
+    display: grid;
+    grid-template-columns: repeat(3,1fr) /*Vai repetir a fração de 1 três vezes */
+
+}
+
+.item{
+    background-color: chartreuse;
+}
+
+div{
+    background-color: chartreuse;
+    border: 2px solid black;
+    margin: 3px;
+}
