@@ -1,0 +1,20 @@
+body{
+    margin: 0px;
+}
+
+article{
+    background-color: rgb(129, 185, 185);
+}
+
+.classe1{
+    background-color: rgb(170, 117, 117);
+}
+
+#id1{
+    background-color: rgb(109, 177, 109);
+}
+
+.fonte{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
