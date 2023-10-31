@@ -1,0 +1,10 @@
+## Nivel de estoque de vinho ##
+
+- [ ] usar sensor ultrasonico para medir o estoque (mede a distancia) alto / medio / baixo
+
+- [ ] feedback visual com lcd para quando estiver alto/medio/alto
+
+- [ ] precisa ter o circuito da fase 1 e fase 2
+
+
+
