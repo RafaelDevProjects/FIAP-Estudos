@@ -29,4 +29,9 @@ let Filmes = [{
     rating: 0
 }]
 
+// ForEach()
+filmes.forEach((element) => {
+    console.log(element)
+})
+
 

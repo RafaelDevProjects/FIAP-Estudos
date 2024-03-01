@@ -20,6 +20,17 @@ const listaFilmes = document.querySelector("#listaFilmes")
  filmes.pop()
  filmes.push('Senhora')
 
+//   // Array [Object]
+// let Filmes = [{
+//     nome: 'harry',
+//     lançamento: 2001,
+//     rating: 10
+// },{
+//     nome: 'Senhor',
+//     lançamento: 2004,
+//     rating: 0
+// }]
+
 window.onload = () => {
     for(let i = 0; i < filmes.length; i++){
         let listaItem = document.createElement('li')
