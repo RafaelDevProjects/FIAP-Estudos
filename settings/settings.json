@@ -18,5 +18,5 @@
     "workbench.activityBar.location": "hidden",
     "files.autoSave": "afterDelay",
     "window.zoomLevel": 0.8,
-    "git.autofetch": true,
+    "git.autofetch": true
 }
