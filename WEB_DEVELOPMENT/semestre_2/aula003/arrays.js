@@ -30,8 +30,12 @@ let Filmes = [{
 }]
 
 // ForEach()
-filmes.forEach((element) => {
-    console.log(element)
-})
+filmes.forEach((element) => console.log(element))
 
+// map
+filmes.map((variavel)=> console.log(variavel + ' Sem hora'))
 
+// filter
+
+filmes.fill('joana', 4)
+console.log(filmes)
