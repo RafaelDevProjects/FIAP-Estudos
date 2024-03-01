@@ -6,32 +6,41 @@ body {
     color: white;
 }
 
+.flex{
+    display: flex;  
+}
+
+.navigation{
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+
 header{
     width: 80%;
     margin: 0 auto;
     padding: 3rem 0;
 }
 
-nav{
-    width: 100%;
-    display: inline-block;
-}
 
-
-nav img{
-    float: left;
-}
-
-nav ul{
-    float: right;
+.navigation ul{
     list-style: none;
     font-weight: 300;
+
+    display: flex;
 }
 
-nav ul li{
+.navigation ul a {
+    text-decoration: none;
+    color: white;
+}
+
+/* nav ul li{
     display: inline;
     margin-left: 20px;;
-}
+} */
 
 nav ul li a:last-child {
     margin-left: 10px;
@@ -95,3 +104,4 @@ div h1{
 div .mini-message{
     font-size: 0.9rem;
 }
+
