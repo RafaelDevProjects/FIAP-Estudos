@@ -1,0 +1,107 @@
+import matplotlib.pyplot as plt
+
+
+def print_matriz(matriz):
+    for linha in matriz:
+        print(linha)
+    return
+
+
+def criar_matriz(linhas, colunas):
+    matriz = []
+    for i in range(linhas):
+        linha = []
+        for j in range(colunas):
+            linha.append(i + 100 * j)
+            # i + j (gradiente diagonal)
+            # i (gradiente horizontal)
+            # j (gradiente vertical)
+            # i + 100 * j (gradiente de coluna fica maior de um lado e menor do outro)
+        matriz.append(linha)
+    return matriz
+
+
+def criar_circulo_matriz(matriz):
+    metade = len(matriz) // 2
+    for i in range(len(matriz)):
+        for j in range(len(matriz[i])):
+            if (i - metade)**2 + (j - metade)**2 <= metade**2:
+                matriz[i][j] = 1
+
+    return matriz
+
+
+def tabuleiro_xadrez(matriz):
+    for i in range(len(matriz)):
+        for j in range(len(matriz)):
+            '''
+            if i % 2 == 0:
+                if j % 2 == 0:
+                    matriz[i][j] = 1
+                else:
+                    matriz[i][j] = 0
+            else:
+                if j % 2 == 0:
+
+                    matriz[i][j] = 0
+                else:
+                    matriz[i][j] = 1
+            '''
+            if (i+j) % 2 == 0:
+                matriz[i][j] = 1
+            else:
+                matriz[i][j] = 0
+    return matriz
+
+
+def inverter_matriz(matriz):
+    for i in range(len(matriz)):
+        for j in range(i):
+            matriz[i][j] = matriz[j][i]
+            aux = matriz[i][j]
+            matriz[j][i] = aux
+    return matriz
+
+
+notas = [[2, 3], [8, 10], [9, 5], [6, 8], [7, 1]]
+pesos = [1, 2, 3, 2, 1]
+soma = 0
+soma_pesos = 0
+media_ponderada = []
+for j in range(len(notas[0])):
+    for i in range(len(pesos)):
+        print(soma_pesos)
+        soma += notas[i][j] * pesos[i]
+        soma_pesos += pesos[i]
+
+
+
+
+
+
+print(media_ponderada)
+
+
+
+
+'''
+matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+print_matriz(matriz)
+print()
+inverter_matriz(matriz)
+print_matriz(matriz)
+
+matriz_dez_mil_pixels = criar_matriz(100,100) #imagem de 10000 pixels
+matriz_cinquenta_mil_pixels = criar_matriz(500, 500) # imagem de 50000 pixels
+criar_circulo_matriz(matriz_cinquenta_mil_pixels)
+
+plt.imshow(matriz_cinquenta_mil_pixels)
+plt.show()
+
+tabuleiro = criar_matriz(8,8)
+tabuleiro_xadrez(tabuleiro)
+plt.imshow(tabuleiro, 'grey')
+plt.show()
+
+'''
+
