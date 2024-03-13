@@ -17,6 +17,7 @@ def criar_matriz(linhas, colunas):
             # i (gradiente horizontal)
             # j (gradiente vertical)
             # i + 100 * j (gradiente de coluna fica maior de um lado e menor do outro)
+            # i < j ( acima da diagonal )
         matriz.append(linha)
     return matriz
 
