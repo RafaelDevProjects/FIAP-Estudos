@@ -77,12 +77,18 @@ notas = [[1, 2],[4, 5],[7, 8],[10, 11],[13, 14]]
 pesos_notas = [1, 2, 3, 4, 5]
 soma_pesos = 0
 media_ponderada = []
+
 for j in range(len(notas[0])):
     soma = 0
     for i in range(len(pesos_notas)):
-        print(soma_pesos)
         soma += notas[i][j] * pesos_notas[i]
         soma_pesos += pesos_notas[i]
+    media_ponderada.append(soma/soma_pesos)
+print(media_ponderada)
+
+
+
+
 
 
 matriz = cria_matriz(8, 8)
