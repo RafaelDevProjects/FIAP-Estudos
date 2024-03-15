@@ -17,6 +17,6 @@
     "editor.wordWrap": "on",
     "workbench.activityBar.location": "hidden",
     "files.autoSave": "afterDelay",
-    "window.zoomLevel": 0.8,
+    "window.zoomLevel": 0.5,
     "git.autofetch": true
 }
