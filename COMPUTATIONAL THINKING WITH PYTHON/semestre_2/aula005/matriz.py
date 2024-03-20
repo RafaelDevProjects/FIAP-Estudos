@@ -87,13 +87,16 @@ for j in range(len(notas[0])):
 print(media_ponderada)
 
 
+def cinema(matriz):
+    for linha in range(len(matriz)):
+        for coluna in range(len(matriz[linha])):
+            if (i + j) % 2 == 0:
+                matriz[linha][coluna] = 'ocupada'
+            else:
+                matriz[linha][coluna] = 'vaga'
+    return matriz
 
 
+matriz = cria_matriz(50,50)
+print_matriz(cinema(matriz))
 
-
-matriz = cria_matriz(8, 8)
-print_matriz(tabuleiro_xadrez(matriz))
-
-tabuleiro_xadrez(matriz)
-plt.imshow(matriz, 'grey')
-plt.show()
