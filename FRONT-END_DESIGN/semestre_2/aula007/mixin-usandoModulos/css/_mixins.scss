@@ -27,21 +27,3 @@
     transform: translate(-50%, -50%)
 }
 
-
-* {
-    @include default-config(0, 0);
-}
-
-.container {
-    @include div-size(80%,100vh);
-    @include div-style(#e7e7e7e7);
-    @include flex-config(row, center, center);
-    margin: 0 auto;
-
-}
-
-.box {
-    @include div-size(300px, 300px);
-    @include div-style(purple);
-    // @include relative-center()
-}
