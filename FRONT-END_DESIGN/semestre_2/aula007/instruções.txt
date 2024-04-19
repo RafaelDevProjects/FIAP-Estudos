@@ -1,0 +1,4 @@
+baixe a extenção sass
+
+#comando para o estilo funcionar.
+SASS --watch style.sass:style.css    /     Live sass compiller
