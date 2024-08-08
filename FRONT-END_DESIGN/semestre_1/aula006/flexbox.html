@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula-006</title>
+    
+    <!--flex-->
+    <style>
+        .container{
+            display: flex; /*Altera o display para flex*/
+            background-color: lightblue; 
+            justify-content: center; /*Alinha o conteudo horizontalmente*/
+            align-items: center; /*Alinha o conteudo verticalmente*/
+            justify-content: space-between; /*O espaço entre os itens do conteiner*/
+            flex-direction: column; /*Coloca a direção como coluna*/
+            flex-direction: column-reverse; /*Coloca a coluna como reversa*/ 
+            flex-direction: row; /*Coloca como direção de linha*/
+            flex-wrap: wrap; /*O warp faz todos os elementos filhos quebram de linha*/
+            
+        }
+
+        .item{
+            background-color: lightgrey;
+            border: solid 1px black;
+            width: 100px;
+            text-align: center;
+            padding: 20px;
+
+        }
+         
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <p class="item">TESTE 1</p>
+        <p class="item">TESTE 2</p>
+        <p class="item">TESTE 3</p>
+        <p class="item">TESTE 4</p>
+    </div>
+    
+</body>
+</html>

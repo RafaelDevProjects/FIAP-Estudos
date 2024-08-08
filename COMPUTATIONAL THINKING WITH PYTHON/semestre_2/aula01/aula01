@@ -1,0 +1,168 @@
+'''senha_pgt=input(str('Qual é a sua senha? '))
+senha = '1234'
+
+if senha == senha_pgt:
+    print('SENHA VALIDA')
+else:
+    print('SENHA INVALIDA')
+
+'''
+
+'''qnt = int(input('Quantas maças você quer comprar'))
+
+if qnt < 12:
+    preco = qnt * 0.30
+else:
+    preco = qnt * 0.25
+
+print(F'O preço de todas as maças foi de {preco}')
+'''
+
+'''
+salario = int(input('Salário: '))
+
+if salario < 1903:
+    oliquota = 0
+elif salario < 2826:
+    oliquota = 7.5/100
+elif salario < 3751:
+    oliquota = 15/100
+elif salario < 4664:
+    oliquota = 22.5/100
+else:
+    oliquota = 27.5/100
+    
+desconto = oliquota * salario
+calc = salario - desconto
+print(f'Seu salario é {calc} com desconto de {desconto}')
+
+'''
+'''
+n1 = int(input('Numero 1: '))
+n2 = int(input('Numero 2: '))
+n3 = int(input('Numero 3: '))
+
+if n1 > n2 and n1 > n3:
+    maior = n1
+elif n2 > n3:
+    maior = n2
+else:
+    maior = n3
+
+print(f'O maior numero é {maior}')
+'''
+'''
+a = int(input('Numero 1: '))
+b = int(input('Numero 2: '))
+c = int(input('Numero 3: '))
+
+if a > b and a > c:
+    aux = c
+    c = a
+    a = aux
+elif b > c:
+    aux = b
+    b = c
+    c = aux
+if a > b:
+    aux = a
+    a = b
+    b = aux
+print({a, b, c})
+'''
+'''
+nome = input('Nome: ')
+idade= int(input('idade: '))
+salario = int(input('salario: '))
+sexo = input('sexo: ')
+civil = input('estado civil: ')
+
+
+while len(nome) < 3:
+    nome = input('Nome: ')
+while idade < 0 or idade > 150:
+    idade= input('idade: ')
+while salario < 0:
+    salario = input('salario: ')
+while not (sexo == 'm' or sexo == 'f'):
+    sexo = input('sexo: ')
+while not (civil == 's' or civil == 'c' or civil == 'v' or civil == 'd'):
+    civil = input('estado civil: ')
+
+'''
+''''
+a = 80
+b = 200
+anos = 0
+while a < b:
+    a *= 1.03
+    b *= 1.015
+    anos+=1
+
+print(anos)
+'''
+'''
+soma = 0
+for c in range(5):
+    num = int(input('Digite um numero: '))
+    soma += num
+
+media = soma/5
+print(f'A media: {media}')
+'''
+'''
+num1 = int(input('digite um numero inteiro: '))
+num2 = int(input('digite um numero inteiro: '))
+
+while num1 < num2:
+    print(num1, end= ' ')
+    num1+=1
+
+while num2 < num1:
+    print(num2, end = ' ')
+    num2+=1
+
+'''
+'''
+for numero in range(0, 11):
+    print(f'Tabuada do {numero}')
+    for mult in range(0, 11):
+        print(f'{numero} X {mult} = {numero*mult}')
+
+'''
+'''
+num = int(input('Numero de termos: '))
+a = 1
+b = 1
+
+for i in range(num):
+    print(a, end=' ')
+    c = a + b
+    a = b
+    b = c
+
+'''
+'''
+lista = [1, 20, 4, 2 , 4, 3, 4, 232, 1, 4, 420]
+par = 0
+impar = 0
+
+for i in range(len(lista)):
+    if lista[i] % 2 == 0:
+        print(f'{lista[i]} [par] ')
+        par +=1
+    else:
+        print(f'{lista[i]} [impar]')
+        impar+=1
+print(f'Impar: {impar}')
+print(f'Par: {par}')
+'''
+''''
+aluno = ['rafael', 'lucas', 'lucca', 'miguel']
+notas = [10, 9, 8, 7]
+
+for i in range(len(aluno)):
+    print(f'{aluno[i]} : {notas[i]}')
+
+
+''''

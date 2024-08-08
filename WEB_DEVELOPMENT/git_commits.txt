@@ -1,0 +1,5 @@
+git status 
+git add .
+git status
+git commit -m "adicionando arquivo"
+git push origin nome_brach
