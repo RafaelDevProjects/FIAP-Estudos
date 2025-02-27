@@ -1,16 +1,26 @@
 package org.example.models;
 
 public class Bebida {
+
     private int codigo;
-    private int nome;
-    private int descricao;
+
+    private String nome;
+
+    private String descricao;
+
     private float valor;
 
-    public Bebida(int codigo, int nome, int descricao, float valor) {
+    public Bebida(int codigo, String nome, String descricao, float valor) {
+        super();
         this.codigo = codigo;
         this.nome = nome;
         this.descricao = descricao;
         this.valor = valor;
+    }
+
+    @Override
+    public String toString() {
+        return "Código: " + this.codigo + "Bebida " + this.nome + "Descricao " + this.descricao + "-----" + "Preço " + this.valor;
     }
 
     public int getCodigo() {
@@ -21,19 +31,19 @@ public class Bebida {
         this.codigo = codigo;
     }
 
-    public int getNome() {
+    public String getNome() {
         return nome;
     }
 
-    public void setNome(int nome) {
+    public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public int getDescricao() {
+    public String getDescricao() {
         return descricao;
     }
 
-    public void setDescricao(int descricao) {
+    public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
 
@@ -44,4 +54,7 @@ public class Bebida {
     public void setValor(float valor) {
         this.valor = valor;
     }
+
+
+
 }

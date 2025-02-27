@@ -1,16 +1,26 @@
 package org.example.models;
 
 public class Prato {
-    private int codigo;
-    private int nome;
-    private int descricao;
-    private float valor;
 
-    public Prato(int codigo, int nome, int descricao, float valor) {
+    private int codigo;
+
+    private String nome;
+
+    private String descricao;
+
+    private float preco;
+
+    public Prato(int codigo, String nome, String descricao, float preco) {
+        super();
         this.codigo = codigo;
         this.nome = nome;
         this.descricao = descricao;
-        this.valor = valor;
+        this.preco = preco;
+    }
+
+    @Override
+    public String toString() {
+        return "Código: " + this.codigo + "Prato " + this.nome + "Descricao " + this.preco + "-----" + "Preço " + this.preco;
     }
 
     public int getCodigo() {
@@ -21,27 +31,28 @@ public class Prato {
         this.codigo = codigo;
     }
 
-    public int getNome() {
+    public String getNome() {
         return nome;
     }
 
-    public void setNome(int nome) {
+    public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public int getDescricao() {
+    public String getDescricao() {
         return descricao;
     }
 
-    public void setDescricao(int descricao) {
+    public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
 
-    public float getValor() {
-        return valor;
+    public float getPreco() {
+        return preco;
     }
 
-    public void setValor(float valor) {
-        this.valor = valor;
+    public void setPreco(float preco) {
+        this.preco = preco;
     }
+
 }
