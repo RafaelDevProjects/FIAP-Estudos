@@ -5,4 +5,4 @@ scipy
 plotly
 openpyxl
 streamlit-extras
-plotnines
+plotnine
